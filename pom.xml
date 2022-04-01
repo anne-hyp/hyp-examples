@@ -5,6 +5,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>hyp-designPattern-examples</module>
+        <module>hyp-springcloud-examples</module>
+        <module>hyp-springcloudalibaba-examples</module>
+        <module>hyp-mq-examples</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
