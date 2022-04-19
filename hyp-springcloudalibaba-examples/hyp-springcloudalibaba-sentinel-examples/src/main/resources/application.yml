@@ -5,3 +5,4 @@ spring:
         sentinel:
             transport:
                 dashboard: localhost:8090
+debug: true
