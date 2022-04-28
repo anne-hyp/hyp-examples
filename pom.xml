@@ -9,6 +9,9 @@
         <module>hyp-springcloudalibaba-examples</module>
         <module>hyp-mq-examples</module>
         <module>hyp-others-examples</module>
+        <module>hyp-redis-examples</module>
+        <module>hyp-spring-examples</module>
+        <module>hyp-javase-examples</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
