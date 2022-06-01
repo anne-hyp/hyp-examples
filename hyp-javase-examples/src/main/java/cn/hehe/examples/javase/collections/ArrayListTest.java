@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
  * @author hyp
  * @title: ArrayListTest
  * @projectName hyp-examples
- * @description: TODO
+ * @description: ArrayList测试类
  * @date 2022/4/28 16:32
  */
 public class ArrayListTest {
@@ -44,7 +44,10 @@ public class ArrayListTest {
 //排序
 //----------------------------------------------------------------------------------------------------------------------------------
     /**
-     * Collections排序：Collections.sort()方法可以对Integer和String类型排序
+     * Collections排序：
+     * ①Collections.sort()方法可以对Integer和String类型排序
+     * ②实体类继承Comparable接口后调用Collections.sort()方法实现排序
+     * 其实①和②都是通过继承Comparable接口来实现排序
      */
     public static void listSort(){
         List<Integer> numbers = new ArrayList<>();
@@ -58,7 +61,7 @@ public class ArrayListTest {
         Collections.sort(strNumbers);
         System.out.println("strNumbers："+strNumbers.toString());
         //运行结果 --> strNumbers：[1, 2, 3, 4, 6, 7, 8, 9]
-
+        
         List<User> userList = new ArrayList<>();
         Collections.addAll(userList,
                 new User(1,"Jack",25,"男"),
@@ -73,7 +76,7 @@ public class ArrayListTest {
     }
 
     /**
-     * 自定义Comparator排序
+     * 调用List的sort方法，传入Comparator类并实现compare方法进行排序
      */
     public static void comparatorSort(){
         List<User> userList = new ArrayList<>();
@@ -94,7 +97,7 @@ public class ArrayListTest {
     }
 
     /**
-     * 通过stream自定义Comparator排序
+     * 通过Collection.stream().sort()方法，传入Comparable.compareTo()或Comparator.comparing()进行排序
      */
     public static void streamSort(){
         //排序整数类型集合中的元素
@@ -120,7 +123,6 @@ public class ArrayListTest {
                 .collect(Collectors.toList());
         System.out.println("userList："+userList.toString());
     }
-
 //----------------------------------------------------------------------------------------------------------------------------------
 
 }

@@ -1,0 +1,9 @@
+server:
+  port: 5673
+
+spring:
+  rabbitmq:
+    host: 192.168.80.88  #mq服务器ip,默认为localhost
+#    port: 5672          #mq服务器port,默认为5672
+#    username: guest     #mq服务器username,默认为guest
+#    password: guest     #mq服务器password,默认为guest

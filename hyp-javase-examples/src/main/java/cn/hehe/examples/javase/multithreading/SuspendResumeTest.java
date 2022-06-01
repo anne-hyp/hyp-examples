@@ -1,8 +1,7 @@
 package cn.hehe.examples.javase.multithreading;
 
+
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.concurrent.locks.LockSupport;
 
 /**
@@ -27,8 +26,12 @@ public class SuspendResumeTest {
         public void run() {
             synchronized (object) {
                 System.out.println(getName() + "占用。。");
-//                Thread.currentThread().suspend();
-                LockSupport.park();
+//                LockSupport.park();
+                try {
+                    object.wait();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 System.out.println(getName() + "执行完成。。");
             }
         }
@@ -38,10 +41,12 @@ public class SuspendResumeTest {
         t1.start();
         Thread.sleep(200);
         t2.start();
-//        t1.resume();
-//        t2.resume();
-        LockSupport.unpark(t1);
-        LockSupport.unpark(t2);
+        Thread.sleep(200);
+        synchronized (object) {
+            object.notifyAll();
+        }
+//        LockSupport.unpark(t1);
+//        LockSupport.unpark(t2);
         t1.join();
         t2.join();
     }
