@@ -1,20 +1,20 @@
-package cn.hehe.springcloudalibaba.sentinel;
+package cn.hehe.examples.others.all;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
  * @author hyp
- * @title: sentinelApplication
+ * @title: allOthersApplication
  * @projectName hyp-examples
- * @description: TODO
- * @date 2022/3/25 14:32
+ * @description: 其他启动类
+ * @date 2022/6/13 11:53
  */
 @SpringBootApplication
-public class SentinelApplication {
+public class allOthersApplication {
 
     public static void main(String[] args){
-        SpringApplication.run(SentinelApplication.class, args);
+        SpringApplication.run(allOthersApplication.class, args);
     }
 
 }

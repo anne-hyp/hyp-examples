@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author hyp
  * @title: MainStart
- * @description: TODO
+ * @description: 解决循环依赖问题
  * @date 2022/4/23 11:00
  */
 public class MainStart {
@@ -32,17 +32,6 @@ public class MainStart {
     }
 
     public static void main(String[] args) throws Exception {
-        TreeSet tree = new TreeSet();
-        tree.add(10);
-        tree.add(30);
-        tree.add(20);
-        System.out.println(tree);
-        LinkedHashSet set = new LinkedHashSet();
-        set.add(30);
-        set.add(10);
-        set.add(20);
-        set.add(null);
-        System.out.println(set);
         // 加载了BeanDefinition
         loadBeanDefinitions();
         // 注册Bean的后置处理器

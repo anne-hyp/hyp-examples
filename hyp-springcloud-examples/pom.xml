@@ -12,9 +12,6 @@
     <groupId>cn.hehe.hyp-examples</groupId>
     <artifactId>hyp-springcloud-examples</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>hyp-springcloud-hystrix-examples</module>
-    </modules>
 
     <properties>
         <spring-cloud.version>2021.0.1</spring-cloud.version>

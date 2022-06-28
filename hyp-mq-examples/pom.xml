@@ -13,7 +13,6 @@
     <artifactId>hyp-mq-examples</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>hyp-mq-rocketmq-examples</module>
         <module>hyp-mq-rabbitmq-examples</module>
     </modules>
 

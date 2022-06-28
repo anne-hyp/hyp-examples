@@ -11,7 +11,7 @@ import redis.clients.jedis.Jedis;
  * @author hyp
  * @title: RedisConfig
  * @projectName hyp-examples
- * @description: TODO
+ * @description: redis配置类
  * @date 2022/4/21 14:58
  */
 @Configuration

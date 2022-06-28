@@ -1,8 +1,5 @@
-package cn.hehe.examples.javase.multithreading;
+package cn.hehe.examples.javase.multiThreads;
 
-
-import java.util.ArrayList;
-import java.util.concurrent.locks.LockSupport;
 
 /**
  * @author hyp

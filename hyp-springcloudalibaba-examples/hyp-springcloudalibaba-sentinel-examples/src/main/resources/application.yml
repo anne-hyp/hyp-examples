@@ -1,8 +1,0 @@
-server:
-    port: 8088
-spring:
-    cloud:
-        sentinel:
-            transport:
-                dashboard: localhost:8090
-debug: true

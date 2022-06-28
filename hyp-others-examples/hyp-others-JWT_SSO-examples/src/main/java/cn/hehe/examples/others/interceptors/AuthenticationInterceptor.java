@@ -17,7 +17,7 @@ import java.lang.reflect.Method;
  * @author hyp
  * @title: AuthenticationInterceptor
  * @projectName hyp-examples
- * @description: TODO
+ * @description: 权限认证拦截器
  * @date 2022/4/19 16:36
  */
 @Slf4j
@@ -25,8 +25,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        // 从http请求头中取出token
-        final String token = request.getHeader(JWTUtils.AUTH_HEADER_KEY);
+
         //如果不是映射到方法，直接通过
         if(!(handler instanceof HandlerMethod)){
             return true;
@@ -45,6 +44,8 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
                 return true;
             }
         }
+        // 从http请求头中取出token
+        final String token = request.getHeader(JWTUtils.AUTH_HEADER_KEY);
         //验证，并获取token内部信息
         UserTokenVO userToken = JWTUtils.checkToken(token);
 
