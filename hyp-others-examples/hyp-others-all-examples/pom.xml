@@ -11,6 +11,16 @@
 
     <groupId>cn.hehe.hyp-examples.hyp-others-examples</groupId>
     <artifactId>hyp-others-all-examples</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+    </dependencies>
 
 
 </project>
