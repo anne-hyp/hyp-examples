@@ -7,12 +7,12 @@ import java.util.stream.Collectors;
 
 /**
  * @author hyp
- * @title: ArrayListTest
+ * @title: ListTest
  * @projectName hyp-examples
- * @description: ArrayList测试类
+ * @description: List测试类
  * @date 2022/4/28 16:32
  */
-public class ArrayListTest {
+public class ListTest {
 
     public static void main(String[] args){
 //        removeMultipleEle();
@@ -20,6 +20,8 @@ public class ArrayListTest {
         comparatorSort();
     }
 
+//ArrayList
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //元素删除
 //----------------------------------------------------------------------------------------------------------------------------------
     /**
@@ -124,5 +126,7 @@ public class ArrayListTest {
         System.out.println("userList："+userList.toString());
     }
 //----------------------------------------------------------------------------------------------------------------------------------
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 }
